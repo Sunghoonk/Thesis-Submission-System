@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+		
+		<title> 파일 업로드 </title>
+		
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+    	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+    	
+    	<style>
+        	body        { padding-top:80px; }
+    	</style>
+    
+	</head>
+	<body>
+	<div class="container">
+		<div class="page-header text-center">
+		<h1></span> 신규 논문 제출</h1>
+		</div>
+		<br>
+
+	<h2>논문 정보 입력</h2>
+    <table>
+        <tr>
+            <td>학술지명: </td>
+            <td>과학기술과 사회 네트워크</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table>
+        <tr>
+            <td>논문제목: </td>
+            <td><input type="text" name="title"></td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table>
+        <tr>
+            <td>키워드: </td>
+            <td><input type="text" name="key word"></td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table>
+        <tr>
+            <td>초록: </td>
+			<td><input type="text" name="abstract"></td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table>
+        <tr>
+            <td>페이지 수: </td>
+			<td><input type="text" name="abstract"></td>
+        </tr>
+    </table>
+
+    <br>
+	
+	<form method = "post" enctype = "multipart/form-data" action = "/upload/doc"> 
+	<table>
+		<tr>
+			<td><label>원본 파일</label></td>
+			<td><input type = "file" name="doc"></td>
+		<tr>
+	</table>
+	<button type="submit" class="btn btn-warning btn-lg">제출</button>
+	</form>
+		
+		
+		</div>
+
+	</body>
+</html>

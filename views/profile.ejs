@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+		
+		<title>메인 화면</title>
+		
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+    	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+    	
+    	<style>
+        	body        { padding-top:80px; }
+    	</style>
+    
+	</head>
+	<body>
+		
+		<div class="container">			
+						
+			<div class="page-header text-center">
+		        <h1></span> 메인 화면</h1>
+		    </div>
+			<br>
+		    <div class="row">
+		
+		        <div class="col-sm-6">
+		            <div class="well">
+		                <h3><span class="fa fa-user"></span> 프로필 정보</h3>
+						<br>
+						<p>
+		                	<strong>이메일</strong>: <%= user.email %>
+		                	<br><br>
+		                	<strong>이름</strong>: <%= user.name %>
+		                </p>
+						<br>
+		        		<a href="/logout" class="btn btn-default btn-sm">로그아웃</a>
+		            </div>
+		        </div>
+		
+		        <div class="col-sm-6">
+		            <div class="well">
+		                <h3><span class="fa fa-book"></span> 신규논문제출</h3>
+		        		<a href="/upload" class="btn btn-default btn-sm">논문제출하기</a>
+						<br>
+		            </div>
+		        </div>
+
+		        <div class="col-sm-6">
+		            <div class="well">
+		                <h3><span class="fa fa-book"></span> 논문심사현황</h3>
+		        		<a href="/status" class="btn btn-default btn-sm">심사현황보기</a>
+						<br>
+		            </div>
+		        </div>
+
+		        <div class="col-sm-6">
+		            <div class="well">
+		                <h3><span class="fa fa-book"></span> 논문접수/심사</h3>
+		        		<a href="/judge" class="btn btn-default btn-sm">논문접수 및 심사하기</a>
+						<br>
+		            </div>
+		        </div>
+
+			</div>	
+		</div>	
+			
+	</body>
+</html>
