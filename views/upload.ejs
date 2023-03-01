@@ -1,84 +1,148 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
-		
-		<title> 파일 업로드 </title>
-		
-		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
-    	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
-    	
-    	<style>
-        	body        { padding-top:80px; }
-    	</style>
+<head>
+
+<meta charset="UTF-8">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+<link rel="SHORTCUT ICON" href="img/favicon.ico">
+<link href="../public/css/font.css" type="text/css" rel="stylesheet" />
+<link href="../public/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+<link href="../public/css/all.css" type="text/css" rel="stylesheet" />
+<link href="../public/css/reset.css" type="text/css" rel="stylesheet" />
+<link href="../public/css/journal.css" type="text/css" rel="stylesheet" />
+<link href="../public/css/post.css" type="text/css" rel="stylesheet" />
+<title>과학기술과 사회 네트워크 온라인논문투고시스템</title>
     
-	</head>
-	<body>
+</head>
+
+<body>
+
+    <div class="wrap">
+	<div class="header" style="background:#fff;">
+	<div class="top" style="position:relative;">
+		<img src="../public/img/logo.png" alt="로고" title="로고" >
+	</div>
+    </div>
+    
+	<!--container-->
 	<div class="container">
-		<div class="page-header text-center">
-		<h1></span> 신규 논문 제출</h1>
+		<div class="content_wrap">
+			<div class="side_wrap">
+				
+				<div class="sub_menu">
+					<ul>
+						<li class="sub_menu_gnb "><a href="/profile">논문투고현황</a></li>
+						<li class="sub_menu_gnb "><a href="/eval">논문심사</a></li>
+                        <li class="sub_menu_gnb "><a href="/edit">논문편집</a></li>
+                        <li class="sub_menu_gnb "><a href="NULL">투고매뉴얼</a></li>
+                        <li class="sub_menu_gnb "><a href="/logout">로그아웃</a></li>
+                        
+                        
+					</ul>
+				</div>
+			</div>
+            
+			<div class="content">
+				<div class="main_board">
+		    </div>
+
+			<div class="journal sect">
+				<h2 class="journal_title">기본정보입력</h2>
+				<hr class="line">
+			</div>
+                
+
+<div class="sect">
+
+	<div class="board">
+		<div class="table journal_ch">
+			
+		    
+        <form method="post" action="/process/add_thesis"> 
+	       <table>
+		      <tr>
+			     <td><label>성명(국문) </label></td>
+			     <td><input type = "text" name="name_kor"></td>
+		      <tr>
+		      <tr>
+			     <td><label>성명(영문) </label></td>
+			     <td><input type = "text" name="name_eng"></td>
+		      <tr>
+		      <tr>
+				  <td><label>소속 </label></td>
+			     <td><input type = "text" name="department"></td>
+		      <tr>
+		      <tr>
+			     <td><label>이메일 주소 </label></td>
+			     <td><input type = "text" name="email"></td>
+		      <tr>
+		      <tr>
+			     <td><label>휴대폰 번호 </label></td>
+			     <td><input type = "text" name="phone"></td>
+		      <tr>
+		      <tr>
+			     <td><label>우편번호 </label></td>
+			     <td><input type = "text" name="zip"></td>
+		      <tr>
+		      <tr>
+			     <td><label>주소 </label></td>
+			     <td><input type = "text" name="address"></td>
+		      <tr>
+		      <tr>
+			     <td><label>상세주소 </label></td>
+			     <td><input type = "text" name="address_detail"></td>
+		      <tr>
+		      <tr>
+			     <td><label>논문제목(국문) </label></td>
+			     <td><input type = "text" name="title_kor"></td>
+		      <tr>
+		      <tr>
+			     <td><label>논문제목(영문) </label></td>
+			     <td><input type = "text" name="title_eng"></td>
+		      <tr>
+		      <tr>
+			     <td><label>초록(국문) </label></td>
+			     <td><input type = "text" name="abstract_kor"></td>
+		      <tr>
+		      <tr>
+			     <td><label>초록(영문) </label></td>
+			     <td><input type = "text" name="abstract_eng"></td>
+		      <tr>
+		      <tr>
+			     <td><label>키워드(국문) </label></td>
+			     <td><input type = "text" name="keyword_kor"></td>
+		      <tr>
+		      <tr>
+			     <td><label>키워드(영문) </label></td>
+			     <td><input type = "text" name="keyword_eng"></td>
+		      <tr>
+
+	       </table>
+		  <span style="margin-left: 5px;"><a class="down_btn" style = "position: inherit;"><input type="submit" value="제출하기"></a></span>
+	      </form>
+
+    
+	</div>
+</div>
+			
+<div class="footer">
+	<div class="section">
+		<div class="info_box">
+			<div class="info">
+				<ul>
+					<li><span class="area">T E L</span> :<p> 02-555-0701       FAX  : 02-555-0702      E-MAIL :  ksts.network@gmail.com</p> </li>
+					<li><span class="area">주 소</span> :<p> (06097) 서울특별시 강남구 선릉로 602, 5~14층(삼성동)</li>
+				</ul>
+			</div>
 		</div>
-		<br>
-
-	<h2>논문 정보 입력</h2>
-    <table>
-        <tr>
-            <td>학술지명: </td>
-            <td>과학기술과 사회 네트워크</td>
-        </tr>
-    </table>
-
-    <br>
-
-    <table>
-        <tr>
-            <td>논문제목: </td>
-            <td><input type="text" name="title"></td>
-        </tr>
-    </table>
-
-    <br>
-
-    <table>
-        <tr>
-            <td>키워드: </td>
-            <td><input type="text" name="key word"></td>
-        </tr>
-    </table>
-
-    <br>
-
-    <table>
-        <tr>
-            <td>초록: </td>
-			<td><input type="text" name="abstract"></td>
-        </tr>
-    </table>
-
-    <br>
-
-    <table>
-        <tr>
-            <td>페이지 수: </td>
-			<td><input type="text" name="abstract"></td>
-        </tr>
-    </table>
-
-    <br>
-	
-	<form method = "post" enctype = "multipart/form-data" action = "/upload/doc"> 
-	<table>
-		<tr>
-			<td><label>원본 파일</label></td>
-			<td><input type = "file" name="doc"></td>
-		<tr>
-	</table>
-	<button type="submit" class="btn btn-warning btn-lg">제출</button>
-	</form>
-		
-		
+	</div>
+</div>
+			</div>
 		</div>
+	</div>
+</div>
+</div>
+</body>
 
-	</body>
 </html>

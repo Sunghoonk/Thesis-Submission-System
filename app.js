@@ -118,21 +118,39 @@ router.route('/upload').get(function(req, res){
 	res.render('upload.ejs');
 });
 
-router.route('/status').get(function(req, res){
-	console.log('request path: /status');
-	res.render('status.ejs');
+router.route('/upload_file').get(function(req, res){
+	console.log('request path: /upload_file');
+	res.render('upload_file.ejs');
 });
 
-router.route('/judge').get(function(req, res){
-	console.log('request path: /judge');
-	res.render('judge.ejs');
+router.route('/edit').get(function(req, res){
+	console.log('request path: /edit');
+	res.render('edit.ejs');
 });
 
+router.route('/eval').get(function(req, res){
+	console.log('request path: /eval');
+	res.render('eval.ejs');
+});
+
+router.route('/show_thesis').get(function(req, res){
+	console.log('request path: /show_thesis');
+	res.redirect('/process/show_thesis');
+});
+
+router.route('/list_thesis').get(function(req, res){
+	console.log('request path: /list_thesis');
+	res.redirect('/process/list_thesis');
+});
+
+router.route('/listAll_thesis').get(function(req, res){
+	console.log('request path: /listAll_thesis');
+	res.redirect('/process/listAll_thesis');
+});
 
 router.route('/upload/doc').post(upload.array('doc', 1), function(req, res) {
 	console.log('라우팅: /upload/doc');
 	
-	try {
 
 	var files = req.files;
 	console.dir('#==첫번째 파일 정보==#');	
@@ -157,13 +175,22 @@ router.route('/upload/doc').post(upload.array('doc', 1), function(req, res) {
 	console.log('파일 정보: ' + originalname + ', ' + filename + ', ' + mimetype + ',' + size);
 
 	// 응답 전송
-	res.writeHead(200, {'Content-Type': 'text/html;charset=utf-8'});
-	res.write('<h1>파일 업로드 성공</h1>');
-	res.end();
-	
-	} catch(err){
-		console.dir(err.stack);
-	}
+				req.app.render('upload_success', function(err, html) {
+					if (err) {
+                        console.error('응답 웹문서 생성 중 에러 발생 : ' + err.stack);
+                
+                        res.writeHead('200', {'Content-Type':'text/html;charset=utf8'});
+                        res.write('<h2>응답 웹문서 생성 중 에러 발생</h2>');
+                        res.write('<p>' + err.stack + '</p>');
+                        res.end();
+
+                        return;
+                    }
+					
+					console.log('응답 웹문서 : ' + html);
+					res.end(html);
+				});
+
 });
 
 

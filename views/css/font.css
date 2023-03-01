@@ -1,0 +1,92 @@
+/*
+ * Nanum Gothic (Korean) http://www.google.com/fonts/earlyaccess
+ */
+ body, h1 ,h2 ,h3 ,h4 ,h5, h6 ,li ,p{font-family:"Nanum Gothic","nanumgothic","NanumGothic"}
+@font-face {
+  font-family: 'NanumGothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/NanumGothic.eot);
+  src: url(../fonts/NanumGothic-Regular.ttf);
+  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot?#iefix) format('embedded-opentype')
+      /* url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.ttf) format('truetype');*/
+}
+@font-face {
+  font-family: 'NanumGothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/NanumGothic.eot);
+  src: url(../fonts/NanumGothic-bold.ttf);
+ src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.eot?#iefix) format('embedded-opentype')
+      /*  url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.ttf) format('truetype');*/
+}
+@font-face {
+  font-family: 'NanumGothic';
+  font-style: normal;
+  font-weight: 800;
+  src: url(../fonts/NanumGothic.eot);
+  src: url(../fonts/NanumGothic-Extrabold.ttf);
+ src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.eot?#iefix) format('embedded-opentype')
+      /*  url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.ttf) format('truetype');*/
+}
+
+.form {
+
+	font-family: 'NanumGothic';
+	color: #666666;
+	border:#dadada 1px solid;
+	background-color:#ffffff;
+}
+.form_sermon {
+
+	font-family: 'NanumGothic';
+	color: #000000;
+	border:#dadada 1px solid;
+	background-color:#ffffff;
+}
+.form_cmt {
+font-family: 'NanumGothic';
+	color: #666666;
+	border-right: #dadada 1px solid;
+	border-top: #dadada 1px solid;
+	border-left: #dadada 1px solid;
+	border-bottom: #dadada 1px solid;
+	background-color: #ffffff;
+}
+.form_cmty {
+
+	font-family: 'NanumGothic';
+	color: #666666;
+	border-right: #9CD6C7 1px solid;
+	border-TOP: #9CD6C7 1px solid;
+	border-left: #9CD6C7 1px solid;
+	border-bottom: #9CD6C7 1px solid;
+	background-color: #ffffff;
+}
+.form_log {
+
+	font-family: 'NanumGothic';
+	color: #666666;
+	border-right: #DAD2C0 1px solid;
+	border-TOP: #DAD2C0 1px solid;
+	border-left: #DAD2C0 1px solid;
+	border-bottom: #DAD2C0 1px solid;
+	background-color: #FFFDF8;
+}
+.form_board {
+	border: 1px #cccccc solid;
+	height:22;
+	background-color:#FFFFFF;
+	color:#666666;
+	font-size:12px;
+	text-align:left;
+	text-valign: middle;
+	text-indent: 3pt;
+	padding-top: 4px;
+}

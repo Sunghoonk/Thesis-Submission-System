@@ -70,7 +70,7 @@ var login = function(req, res) {
 };
 
 var adduser = function(req, res) {
-	console.log('user(user2.js) 모듈 안에 있는 adduser 호출됨.');
+	console.log('user 모듈 안에 있는 adduser 호출됨.');
 
 	var paramId = req.body.id || req.query.id;
     var paramPassword = req.body.password || req.query.password;
@@ -136,7 +136,7 @@ var adduser = function(req, res) {
 };
 
 var listuser = function(req, res) {
-	console.log('user(user2.js) 모듈 안에 있는 listuser 호출됨.');
+	console.log('user 모듈 안에 있는 listuser 호출됨.');
  
     // 데이터베이스 객체 참조
 	var database = req.app.get('database');
@@ -195,7 +195,7 @@ var listuser = function(req, res) {
 };
 
 
-//사용자를 인증하는 함수 : 아이디로 먼저 찾고 비밀번호를 그 다음에 비교하도록 함
+//사용자를 인증
 var authUser = function(database, id, password, callback) {
 	console.log('authUser 호출됨.');
 	
@@ -206,7 +206,7 @@ var authUser = function(database, id, password, callback) {
 			return;
 		}
 		
-		console.log('아이디 [%s]로 사용자 검색결과', id);
+		console.log('ID [%s]로 사용자 검색결과', id);
 		console.dir(results);
 		
 		if (results.length > 0) {

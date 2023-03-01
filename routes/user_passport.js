@@ -4,13 +4,14 @@ module.exports = function(router, passport) {
 // 홈 화면(Get)
 router.route('/').get(function(req, res) {
 	console.log('request path: /');
-	res.render('index.ejs');
+	console.log(__dirname);
+	res.render('index_.ejs');
 });
 
 // 로그인 화면(Get)
 router.route('/login').get(function(req, res) {
 	console.log('request path: /login');
-	res.render('login.ejs', {message: req.flash('loginMessage')});
+	res.render('login_.ejs', {message: req.flash('loginMessage')});
 });
 
 // 사용자 인증(Post)
@@ -54,9 +55,9 @@ router.route('/profile').get(function(req, res) {
     // 인증된 경우
     console.log('사용자 인증된 상태임.');
 	if (Array.isArray(req.user)) {
-		res.render('profile.ejs', {user: req.user[0]._doc});
+		res.render('home.ejs', {user: req.user[0]._doc});
 	} else {
-		res.render('profile.ejs', {user: req.user});
+		res.render('home.ejs', {user: req.user});
 	}
 });
 
@@ -64,8 +65,11 @@ router.route('/profile').get(function(req, res) {
 router.route('/logout').get(function(req, res) {
 	console.log('request path: /logout');
     
-	req.logout();
-	res.redirect('/');
+	req.logout((err) => {
+		if(err) { return next(err); }
+		req.session.destroy();
+		res.redirect('/');
+	});
 });
 
 };

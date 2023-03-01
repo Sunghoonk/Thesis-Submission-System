@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<meta charset="UTF-8">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+<link rel="SHORTCUT ICON" href="img/favicon.ico">
+<link href="../public/css/font.css" type="text/css" rel="stylesheet" />
+<link href="../public/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+<link href="../public/css/all.css" type="text/css" rel="stylesheet" />
+<link href="../public/css/reset.css" type="text/css" rel="stylesheet" />
+<link href="../public/css/journal.css" type="text/css" rel="stylesheet" />
+<link href="../public/css/post.css" type="text/css" rel="stylesheet" />
+<link href="../public/css/sample.css" type="text/css" rel="stylesheet" />
+<title>과학기술과 사회 네트워크 온라인논문투고시스템</title>
+<div class="form-container">
+  <form method="post" action="/process/add_thesis">
+    <h1>Submit your thesis</h1>
+    <div class="input-group">
+      <label for="name_kor">Full Name (Korean)</label>
+      <input id="name_kor" type="text" name="name_kor" required>
+    </div>
+    <div class="input-group">
+      <label for="name_eng">Full Name (English)</label>
+      <input id="name_eng" type="text" name="name_eng" required>
+    </div>
+    <div class="input-group">
+      <label for="department">Affiliation</label>
+      <input id="department" type="text" name="department" required>
+    </div>
+    <div class="input-group">
+      <label for="email">Email Address</label>
+      <input id="email" type="email" name="email" required>
+    </div>
+    <div class="input-group">
+      <label for="phone">Phone Number</label>
+      <input id="phone" type="tel" name="phone" required>
+    </div>
+    <div class="input-group">
+      <label for="zip">Postal Code</label>
+      <input id="zip" type="text" name="zip" required>
+    </div>
+    <div class="input-group">
+      <label for="address">Address</label>
+      <input id="address" type="text" name="address" required>
+    </div>
+    <div class="input-group">
+      <label for="address_detail">Address Details</label>
+      <input id="address_detail" type="text" name="address_detail" required>
+    </div>
+    <div class="input-group">
+      <label for="title_kor">Title (Korean)</label>
+      <input id="title_kor" type="text" name="title_kor" required>
+    </div>
+    <div class="input-group">
+      <label for="title_eng">Title (English)</label>
+      <input id="title_eng" type="text" name="title_eng" required>
+    </div>
+    <div class="input-group">
+      <label for="abstract_kor">Abstract (Korean)</label>
+      <textarea id="abstract_kor" name="abstract_kor" rows="5" required></textarea>
+    </div>
+    <div class="input-group">
+      <label for="abstract_eng">Abstract (English)</label>
+      <textarea id="abstract_eng" name="abstract_eng" rows="5" required></textarea>
+    </div>
+    <div class="input-group">
+      <label for="keyword_kor">Keywords (Korean)</label>
+      <input id="keyword_kor" type="text" name="keyword_kor" required>
+    </div>
+    <div class="input-group">
+      <label for="keyword_eng">Keywords (English)</label>
+      <input id="keyword_eng" type="text" name="keyword_eng" required>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+    

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+<link rel="SHORTCUT ICON" href="img/favicon.ico">
+<link href="../public/css/font.css" type="text/css" rel="stylesheet" />
+<link href="../public/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+<link href="../public/css/all.css" type="text/css" rel="stylesheet" />
+<link href="../public/css/reset.css" type="text/css" rel="stylesheet" />
+<link href="../public/css/journal.css" type="text/css" rel="stylesheet" />
+<link href="../public/css/post.css" type="text/css" rel="stylesheet" />
+<title>과학기술과 사회 네트워크 온라인논문투고시스템</title>
+    
+
+</head>
+
+<body>
+
+    <div class="wrap">
+	<div class="header" style="background:#fff;">
+	<div class="top" style="position:relative;">
+		<img src="../public/img/logo.png" alt="로고" title="로고" >
+	</div>
+    </div>
+    
+	<!--container-->
+	<div class="container">
+		<div class="content_wrap">
+			<div class="side_wrap">
+				
+				<div class="sub_menu">
+					<ul>
+						<li class="sub_menu_gnb "><a href="/profile">논문투고현황</a></li>
+						<li class="sub_menu_gnb "><a href="/eval">논문심사</a></li>
+                        <li class="sub_menu_gnb "><a href="/edit">논문편집</a></li>
+                        <li class="sub_menu_gnb "><a href="NULL">투고매뉴얼</a></li>
+                        <li class="sub_menu_gnb "><a href="/logout">로그아웃</a></li>
+                        
+					</ul>
+				</div>
+			</div>
+            
+			<div class="content">
+				<div class="main_board">
+		    </div>
+                
+		    <div class="journal sect">
+                <h2 class="journal_title">논문 편집</h2>
+					<hr class="line">
+            </div>
+
+<div class="sect">
+
+	<div class="board">
+		<div class="table journal_ch">
+			
+			<div class="tr_bg">
+				<div class="tr table_head">
+					<div class="td number" style="width:12.5%">
+						접수번호
+					</div><!--
+                    --><div class="td date" style="width:12.5%">
+						접수일시
+					</div><!--
+					--><div class="td title" style="width:35%">
+						<span>논문제목</span>
+					</div><!--
+					--><div class="td request date" style="width:15%">
+						심사요청일
+					</div><!--
+					--><div class="td state" style="width:12.5%">
+						심사현황
+					</div><!--
+                    --><div class="td result" style="width:12.5%">
+						심사결과
+					</div>
+				</div>
+			</div>
+
+            <div class="tr table_body">
+				<div class="td number" style="width:12.5%">
+					<%=index %>
+				</div>
+                <div class="td date" style="width:12.5%">
+					<%=date %>
+				</div>
+				<div class="td title" style="width:35%">
+					<%=title %>
+				</div>
+				<div class="td request date" style="width:15%">
+					<%=request_date %>
+				</div>
+				<div class="td state" style="width:12.5%">
+					<%=state %>
+				</div>
+                 <div class="td result" style="width:12.5%">
+					<%=result %>
+				</div>
+			</div>
+    
+	    </form>
+	   </div>
+	</div>
+</div>
+			
+<div class="footer">
+	<div class="section">
+		<div class="info_box">
+			<div class="info">
+				<ul>
+					<li><span class="area">T E L</span> :<p> 02-555-0701       FAX  : 02-555-0702      E-MAIL :  ksts.network@gmail.com</p> </li>
+					<li><span class="area">주 소</span> :<p> (06097) 서울특별시 강남구 선릉로 602, 5~14층(삼성동)</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</body>
+</html>

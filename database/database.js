@@ -17,8 +17,8 @@ database.init = function(app, config) {
 function connect(app, config) {
 	console.log('DB/ connect() 호출.');
 	
-	// 데이터베이스 연결 : config의 설정 사용
-    mongoose.Promise = global.Promise;  // mongoose의 Promise 객체는 global의 Promise 객체 사용하도록 함
+	// 데이터베이스 연결
+    mongoose.Promise = global.Promise; 
 	mongoose.connect(config.db_url);
 	database.db = mongoose.connection;
 	

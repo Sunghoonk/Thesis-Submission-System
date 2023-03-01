@@ -29,6 +29,7 @@ function initRoutes(app, router) {
 		} else {
 			router.route(curItem.path).post(curModule[curItem.method]);
 		}
+		// router.route('process/login').post(user[login]);
 		
 		console.log('라우팅 모듈 [%s]이(가) 설정됨.', curItem.method);
 	}

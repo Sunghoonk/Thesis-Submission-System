@@ -1,0 +1,13 @@
+.post_head_top{
+	display:none;
+}
+.post_head_top > td {
+	text-align:center;
+	background:#444444;
+	color:#fff;
+}
+.post_head_top > td > table > tr > td > b{
+	font-weight:400;
+	text-align:center;
+	display:block;
+}
