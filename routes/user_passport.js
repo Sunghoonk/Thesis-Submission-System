@@ -4,8 +4,19 @@ module.exports = function(router, passport) {
 // 홈 화면(Get)
 router.route('/').get(function(req, res) {
 	console.log('request path: /');
-	console.log(__dirname);
 	res.render('index_.ejs');
+});
+
+// 논문투고규정(Get)
+router.route('/rule_for_submission').get(function(req, res) {
+	console.log('request path: /rule_for_submission');
+	res.render('rule_for_submission.ejs');
+});
+
+// 연구윤리규정(Get)
+router.route('/rule_for_ethics').get(function(req, res) {
+	console.log('request path: /rule_for_ethics');
+	res.render('rule_for_ethics.ejs');
 });
 
 // 로그인 화면(Get)
@@ -26,6 +37,12 @@ router.route('/login').post(passport.authenticate('local-login', {
 router.route('/signup').get(function(req, res) {
 	console.log('request path: /signup.');
 	res.render('signup.ejs', {message: req.flash('signupMessage')});
+});
+
+// 매뉴얼
+router.route('/manual').get(function(req, res) {
+	console.log('request path: /manual');
+	res.render('manual.ejs');
 });
 
 // 회원 정보 인증(Post)

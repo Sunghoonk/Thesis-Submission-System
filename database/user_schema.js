@@ -11,6 +11,7 @@ Schema.createSchema = function(mongoose) {
 	    hashed_password: {type: String, required: true, 'default':''},
 	    salt: {type:String, required:true},
 	    name: {type: String, index: 'hashed', 'default':''},
+	    department: {type: String, 'default':''},
 	    created_at: {type: Date, index: {unique: false}, 'default': Date.now},
 	    updated_at: {type: Date, index: {unique: false}, 'default': Date.now}
 	});

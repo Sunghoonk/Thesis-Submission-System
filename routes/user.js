@@ -75,6 +75,7 @@ var adduser = function(req, res) {
 	var paramId = req.body.id || req.query.id;
     var paramPassword = req.body.password || req.query.password;
     var paramName = req.body.name || req.query.name;
+    var paramDp = req.body.department || req.query.department;
 	
     console.log('요청 파라미터 : ' + paramId + ', ' + paramPassword + ', ' + paramName);
     

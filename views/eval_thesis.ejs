@@ -22,7 +22,9 @@
     <div class="wrap">
 	<div class="header" style="background:#fff;">
 	<div class="top" style="position:relative;">
-		<img src="../public/img/logo.png" alt="로고" title="로고" >
+		<a href='/'>
+		  <img src="../public/img/logo.png" alt="로고" title="로고">
+		</a>
 	</div>
     </div>
     
@@ -36,7 +38,7 @@
 						<li class="sub_menu_gnb "><a href="/profile">논문투고현황</a></li>
 						<li class="sub_menu_gnb "><a href="/eval">논문심사</a></li>
                         <li class="sub_menu_gnb "><a href="/edit">논문편집</a></li>
-                        <li class="sub_menu_gnb "><a href="NULL">투고매뉴얼</a></li>
+                        <li class="sub_menu_gnb "><a href="/manual">투고매뉴얼</a></li>
                         <li class="sub_menu_gnb "><a href="/logout">로그아웃</a></li>
                         
 					</ul>
@@ -108,14 +110,36 @@
 			     <td><label>논문 번호 </label></td>
 				 <td><input type = "text" name="index" value = <%=index %>></td>
 		      <tr>
+
 		      <tr>
-			     <td><label>적절성 평가 </label></td>
-			     <td><input type = "number" name="point"></td>
+		 		 <input type="checkbox" id = "assign" name = "assign" > 
+				 원고가 이미 발표된 내용 또는 기지의 사실이 아닌 새로운 것인가?
 		      <tr>
+              <br>
+
+		      <tr>
+		 		 <input type="checkbox" id = "assign" name = "assign" >
+		 		 논문의 내용과 결론에 이르는 과정이 참신하고 창의적인가?
+		      <tr>
+              <br>
+
+		      <tr>
+		 		 <input type="checkbox" id = "assign" name = "assign" >
+		 		 사료 및 연구 문헌 이용 방식이 적절하고 신뢰할 만한가?
+		      <tr>
+              <br>
+
+		      <tr>
+		 		 <input type="checkbox" id = "assign" name = "assign" >
+		 		 문헌 인용 방식, 초록 및 핵심어 등의 편집 형식이 제대로 갖추어졌는가?
+		      <tr>
+              <br>
+
 		      <tr>
 			     <td><label>심사의견 </label></td>
 			     <td><input type = "text" name="contents"></td>
 		      <tr>
+
 		      <tr>
 			     <td><label>심사판정 </label></td>
 			     <td><input type = "text" name="judge"></td>

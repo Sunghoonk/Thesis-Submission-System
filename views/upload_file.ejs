@@ -21,7 +21,9 @@
     <div class="wrap">
 	<div class="header" style="background:#fff;">
 	<div class="top" style="position:relative;">
-		<img src="../public/img/logo.png" alt="로고" title="로고" >
+		<a href='/'>
+		  <img src="../public/img/logo.png" alt="로고" title="로고">
+		</a>
 	</div>
     </div>
     
@@ -35,7 +37,7 @@
 						<li class="sub_menu_gnb "><a href="/profile">논문투고현황</a></li>
 						<li class="sub_menu_gnb "><a href="/eval">논문심사</a></li>
                         <li class="sub_menu_gnb "><a href="/edit">논문편집</a></li>
-                        <li class="sub_menu_gnb "><a href="NULL">투고매뉴얼</a></li>
+                        <li class="sub_menu_gnb "><a href="/manual">투고매뉴얼</a></li>
                         <li class="sub_menu_gnb "><a href="/logout">로그아웃</a></li>
                         
                         
@@ -48,7 +50,7 @@
 		    </div>
 
 			<div class="journal sect">
-				<h2 class="journal_title">연구윤리서약 동의/ 원본 파일 제출</h2>
+				<h2 class="journal_title">연구윤리서약 동의/ 유사도 검사 파일 제출</h2>
 				<hr class="line">
 			</div>
                 
@@ -57,15 +59,40 @@
 
 	<div class="board">
 		<div class="table journal_ch">
-			
+		 <p>
+
+		  1. 논문의 일부 또는 전부는 다른 학술지에 심사중이거나 게재된 적이 없으며, 과학기술과 사회 네트워크의 윤리규정을 준수하였습니다. <br>
+
+		  2. 투고 논문에 제시된 다른 저작물들을 적절히 인용하였습니다. <br>
+
+		  3. 모든 저자들이 원고를 검토하고 그 내용에 대한 책임에 동의하였습니다. <br>
+
+		  4. 연구에서 주요부정행위나 부적절한 행위가 이루어지지 않았습니다. <br>
+
+		 </p>
+
+		 <label for="assighn" > 위 내용에 대해 동의합니다. </label>
+		 <input type="checkbox" id = "assign" name = "assign" >
 		    
-          <form method = "post" enctype = "multipart/form-data" action = "/upload/doc"> 
+		 <p>
+
+		  투고할 논문에 대한 KCI 논문 유사도 검사 서비스 결과를 업로드합니다. </br>
+
+		  <a href = "https://check.kci.go.kr/">논문 유사도 검사하기</a>
+
+		   <br>
+
+		 </p>
+
+		 <p>
+          <form method = "post" enctype = "multipart/form-data" action = "/upload/doc_result"> 
 	       <table>
 		      <tr>
-			     <td><label>원본 파일 </label></td>
+			     <td><label>논문 유사도 검사 결과 파일 </label></td>
 			     <td><input type = "file" name="doc"></td>
 		      <tr>
 	       </table>
+		 </p>
 
 		   <span style="margin-left: 5px;"><a class="down_btn" style = "position: inherit;"><input type="submit" value="제출하기"></a></span>
 	     </form>

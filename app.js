@@ -193,7 +193,50 @@ router.route('/upload/doc').post(upload.array('doc', 1), function(req, res) {
 
 });
 
+router.route('/upload/doc_result').post(upload.array('doc', 1), function(req, res) {
+	console.log('라우팅: /upload/doc_result');
+	
 
+	var files = req.files;
+	console.dir('#==첫번째 파일 정보==#');	
+	console.dir(req.files[0]);
+	console.dir('#====#');
+
+	var originalname ='';
+	var filename ='';
+	var mimetype ='';
+	var size =0;
+
+	if(Array.isArray(files)){
+		console.log("파일 갯수: %d", files.length);
+
+		for(var i=0; i<files.length; i++){
+			originalname = files[i].originalname;
+			filename = files[i].filename;
+			size = files[i].size;
+        }	
+	}
+	
+	console.log('파일 정보: ' + originalname + ', ' + filename + ', ' + mimetype + ',' + size);
+
+	// 응답 전송
+				req.app.render('upload_file_2', function(err, html) {
+					if (err) {
+                        console.error('응답 웹문서 생성 중 에러 발생 : ' + err.stack);
+                
+                        res.writeHead('200', {'Content-Type':'text/html;charset=utf8'});
+                        res.write('<h2>응답 웹문서 생성 중 에러 발생</h2>');
+                        res.write('<p>' + err.stack + '</p>');
+                        res.end();
+
+                        return;
+                    }
+					
+					console.log('응답 웹문서 : ' + html);
+					res.end(html);
+				});
+
+});
 
 /*** 404 에러 페이지 처리 ***/
 var errorHandler = expressErrorHandler({
